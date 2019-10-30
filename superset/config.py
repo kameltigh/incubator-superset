@@ -489,11 +489,14 @@ CSV_TO_HIVE_UPLOAD_DIRECTORY = "EXTERNAL_HIVE_TABLES/"
 # uploading CSVs will be stored.
 UPLOADED_CSV_HIVE_NAMESPACE = None
 
+### Jinja time filter addon ###
+from jinja_time_filter import time_filter
+
 # A dictionary of items that gets merged into the Jinja context for
 # SQL Lab. The existing context gets updated with this dictionary,
 # meaning values for existing keys get overwritten by the content of this
 # dictionary.
-JINJA_CONTEXT_ADDONS: Dict[str, Callable] = {}
+JINJA_CONTEXT_ADDONS: Dict[str, Callable] = {'time_filter': time_filter}
 
 # Roles that are controlled by the API / Superset and should not be changes
 # by humans.

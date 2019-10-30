@@ -73,6 +73,7 @@ venv
 ./docker-compose.yml
 ./docker-entrypoint.sh
 ./docker-init.sh
+contrib/docker/docker-compose.yml
 
 # Test data
 celery_results.sqlite

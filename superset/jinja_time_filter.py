@@ -1,7 +1,7 @@
 from flask import request
 from superset.utils import core as utils
 
-def time_filter(default: Optional[str] = None) -> Optional[Any]:
+def time_filter(default = None):
     form_data = request.form.get("form_data")
 
     if isinstance(form_data, str):
